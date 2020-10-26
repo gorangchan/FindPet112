@@ -66,8 +66,8 @@
 </select>
 <insert id="insert" parameterType="board">
 	<!-- 입력하기 전에 키값을 자동 생산하기 위해 사용 -->
-<!--<selectKey keyProperty="num" order="BEFORE" resultType="int">
-		select nvl(max(num),0) + 1 from board1
+<!--<selectKey keyProperty="seq" order="BEFORE" resultType="int">
+		select nvl(max(seq),0) + 1 from board1
 	</selectKey> -->
 	insert into board(seq, category, title, content, hit_cnt,
 		create_userid, create_datetime,	delete_flag) values 

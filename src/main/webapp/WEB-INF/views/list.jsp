@@ -149,8 +149,7 @@ footer {
 								</c:if> <c:if test="${board.hit_cnt > 30 }">
 									<img alt="" src="${path}/images/hot.gif">
 								</c:if> <a
-								href="${path}/view/num/${board.seq}/pageNum/${pb.currentPage}"
-								> ${board.title}</a>
+								href="${path}/view/seq/${board.seq}/pageNum/${pb.currentPage}"> ${board.title}</a>
 							</td>
 							<td>${board.create_userid }</td>
 							<td>${board.hit_cnt }</td>

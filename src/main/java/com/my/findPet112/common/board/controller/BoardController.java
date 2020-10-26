@@ -46,32 +46,33 @@ public class BoardController {
 		return "list";
 	}
 
-	/*
-	 * @RequestMapping("/insertForm/nm/{nm}/pageNum/{pageNum}") public String
-	 * insertForm(@PathVariable String nm,
-	 * 
-	 * @PathVariable String pageNum, Model model) { int ref = 0, re_level = 0,
-	 * re_step = 0, num = 0; if (nm != null && !nm.equals("") && !nm.equals("null"))
-	 * { // 답변글 num = Integer.parseInt(nm); BoardVO board = bs.select(num); // 답변글이
-	 * 아니면 num과 ref는 같다 // 답변글은 읽은 글의 ref값을 답변글의 ref에 반영 ref = board.getRef();
-	 * re_level = board.getRe_level(); re_step = board.getRe_step(); }
-	 * model.addAttribute("ref", ref); model.addAttribute("re_level", re_level);
-	 * model.addAttribute("re_step", re_step); model.addAttribute("pageNum",
-	 * pageNum); model.addAttribute("num", num);
-	 * 
-	 * return "insertForm"; }
-	 * 
-	 * @RequestMapping("/insert") public String insert(BoardVO board, String
-	 * pageNum, Model model, HttpServletRequest request) {
-	 * board.setIp(request.getRemoteAddr()); // 작성자 ip int number = bs.maxNum(); if
-	 * (board.getNum() != 0) { // 답변글 // re_step값을 정해 bs.updateStep(board); // 읽은 글의
-	 * re_step과 re_level보다 1씩 증가 board.setRe_level(board.getRe_level() + 1);
-	 * board.setRe_step(board.getRe_step() + 1); } else board.setRef(number); //
-	 * 답변글이 아닐 때 board.setNum(number); int result = bs.insert(board);
-	 * model.addAttribute("result", result); model.addAttribute("pageNum", pageNum);
-	 * return "insert"; }
-	 */
-	@RequestMapping("/view/num/{num}/pageNum/{pageNum}")
+//	/*
+//	 * @RequestMapping("/insertForm/nm/{nm}/pageNum/{pageNum}") public String
+//	 * insertForm(@PathVariable String nm,
+//	 * 
+//	 * @PathVariable String pageNum, Model model) { int ref = 0, re_level = 0,
+//	 * re_step = 0, num = 0; if (nm != null && !nm.equals("") && !nm.equals("null"))
+//	 * { // 답변글 num = Integer.parseInt(nm); BoardVO board = bs.select(num); // 답변글이
+//	 * 아니면 num과 ref는 같다 // 답변글은 읽은 글의 ref값을 답변글의 ref에 반영 ref = board.getRef();
+//	 * re_level = board.getRe_level(); re_step = board.getRe_step(); }
+//	 * model.addAttribute("ref", ref); model.addAttribute("re_level", re_level);
+//	 * model.addAttribute("re_step", re_step); model.addAttribute("pageNum",
+//	 * pageNum); model.addAttribute("num", num);
+//	 * 
+//	 * return "insertForm"; }
+//	 * 
+//	 * @RequestMapping("/insert") public String insert(BoardVO board, String
+//	 * pageNum, Model model, HttpServletRequest request) {
+//	 * board.setIp(request.getRemoteAddr()); // 작성자 ip int number = bs.maxNum(); if
+//	 * (board.getNum() != 0) { // 답변글 // re_step값을 정해 bs.updateStep(board); // 읽은 글의
+//	 * re_step과 re_level보다 1씩 증가 board.setRe_level(board.getRe_level() + 1);
+//	 * board.setRe_step(board.getRe_step() + 1); } else board.setRef(number); //
+//	 * 답변글이 아닐 때 board.setNum(number); int result = bs.insert(board);
+//	 * model.addAttribute("result", result); model.addAttribute("pageNum", pageNum);
+//	 * return "insert"; }
+//	 */
+	
+	@RequestMapping("/view/seq/{seq}/pageNum/{pageNum}")
 	public String view(@PathVariable int seq,
 			@PathVariable String pageNum, Model model) {
 		bs.updateReadCount(seq);
