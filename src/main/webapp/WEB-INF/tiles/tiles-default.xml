@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<definition name="standardLayout"   template="/layouts/standard.jsp">
+		<put-attribute name="header"   value="/layouts/header.jsp"   />
+		<put-attribute name="content"  expression="${requestScope.body}" />
+		<put-attribute name="footer"	value="/layouts/footer.jsp" />
+	</definition>
+
+	<!-- 팝업 레이아웃  -->
+    <definition name="popupLayout" template="/layouts/popupStandard.jsp">
+		<put-attribute name="content"     expression="${requestScope.body}"         />
+		
+    </definition>
+
+	<definition name="/standardLayout/**" extends="standardLayout">
+		<put-attribute name="content"	value="/WEB-INF/views/{1}.jsp" />
+	
+		
+	</definition>
+
+	<definition name="/popupLayout/**" extends="popupLayout">
+		<put-attribute name="content"	value="/WEB-INF/views/{1}.jsp" />
+	</definition>
+
+</tiles-definitions>

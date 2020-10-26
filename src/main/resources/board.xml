@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boardns">
+
+<resultMap type="board" id="boardResult">
+	<result property="seq" 				column="seq"/>
+	<result property="category" 		column="category"/>
+	<result property="content" 			column="content"/>
+	<result property="phone" 			column="phone"/>
+	<result property="place" 			column="place"/>
+	<result property="b_time" 			column="b_time"/>
+	<result property="b_state" 			column="b_state"/>
+	<result property="b_file" 			column="b_file"/>
+	<result property="hit_cnt" 			column="hit_cnt"/>
+	<result property="create_userid" 	column="create_userid"/>
+	<result property="create_datetime" 	column="create_datetime"/>
+	<result property="update_userid"	column="update_userid"/>
+	<result property="update_datetime" 	column="update_datetime"/>
+	<result property="delete_flag" 		column="delete_flag"/>
+	<result property="ref" 				column="ref"/>
+	<result property="re_step" 			column="re_step"/>
+	<result property="re_level" 		column="re_level"/>
+	<result property="password"         column="password"/>
+</resultMap>
+<select id="getTotal" parameterType="board" resultType="int">
+	select count(*) from board
+	<where>
+			<if test="keyword!=null and keyword!=''">
+				<if test="search=='subcon'">
+					title like '%'||#{keyword}||'%' or
+					content like '%'||#{keyword}||'%'
+				</if>
+				<if test="search!='subcon'">
+					${search} like '%'||#{keyword}||'%'
+				</if>
+			</if>
+	</where>
+</select>
+<!-- <select id="list" parameterType="map" resultMap="boardResult">
+	select * from (select a.*,rowNum rn from (
+		select * from board1 order by ref desc, re_step) a)
+			where rn between #{startRow} and #{endRow}
+</select> -->
+<!-- 	#은 값 문자('대박') 
+		$은 키 변수 writer  -->
+<select id="list" parameterType="board" resultMap="boardResult">
+	select * from (select a.*,rowNum rn from (
+		select * from board 
+		<where>
+			<if test="keyword!=null and keyword!=''">
+				<if test="search=='subcon'">
+					title like '%'||#{keyword}||'%' or
+					content like '%'||#{keyword}||'%'
+				</if>
+				<if test="search!='subcon'">
+					${search} like '%'||#{keyword}||'%'
+				</if>
+			</if>
+	</where>		
+		order by ref desc, re_step) a)
+			where rn between #{startRow} and #{endRow}
+</select>
+<select id="maxNum" resultType="integer">
+	select nvl(max(seq),0) + 1 from board
+</select>
+<insert id="insert" parameterType="board">
+	<!-- 입력하기 전에 키값을 자동 생산하기 위해 사용 -->
+<!--<selectKey keyProperty="num" order="BEFORE" resultType="int">
+		select nvl(max(num),0) + 1 from board1
+	</selectKey> -->
+	insert into board(seq, category, title, content, hit_cnt,
+		create_userid, create_datetime,	delete_flag) values 
+		 (board_seq.nextval,'1', #{title}, #{content}, '0', 
+		#{create_userid}, sysdate, 'N')
+</insert>
+<update id="updateReadCount" parameterType="int">
+	update board set hit_cnt = hit_cnt + 1 where seq=#{seq}
+</update>
+<update id="updateStep" parameterType="board">
+	update board set re_step = re_step + 1 
+		where ref=#{ref} and re_step > #{re_step}
+</update>
+<select id="select" parameterType="integer" resultType="board">
+	select * from board where seq=#{seq}
+</select>
+<update id="update" parameterType="board">
+	update board set  title=#{title}, create_userid=#{create_userid},
+		content=#{content} where seq=#{seq}
+</update>
+<update id="delete" parameterType="integer">
+	update board set delete_flag ='y' where seq=#{seq}
+</update>
+</mapper>
+
+
+

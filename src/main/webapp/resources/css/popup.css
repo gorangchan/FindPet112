@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+/* POPUP style */
+#popup_wrap{width:100%;height:600px;}
+.pop_header {overflow:hidden;width:100%;height:46px;padding-top:15px;}
+.pop_header h1 {float:left; color:#2d6bba; font-size:28px;margin-left:15px;margin-top:1px;}
+.pop_header a{float:right;width:36px;height:36px; background:url('/images/home/common/popup_close.gif') no-repeat 0 0;text-indent:-9999px;overflow:hidden;margin-right:15px;}
+.pop_search{width:100%;margin:0 auto;}
+.pop_search form{margin:0;padding:0;}
+
+/* 탭방식 주소검색 */
+.tab_box{width:510px;height:318px;margin:0 auto;}
+ul.tabs {float:left;height:55px;border: 1px solid #ccc;width:508px;font-size:16px;}
+ul.tabs li {float: left;text-align:center;cursor: pointer; width:168px;height: 55px;line-height: 55px;border-left:none;border-right: 1px solid #ccc;font-weight: bold;background: #fafafa;overflow: hidden;position: relative;}
+ul.tabs li.active {background: #FFFFFF;border-bottom:1px solid #FFFFFF;}
+ul.tabs li:nth-child(3) {width:170px;border-right:0;border-top:0;}
+.tab_container {clear: both;float: left;width:508px;height:240px;border: 1px solid #ccc;border-top:none;background:#fff;}
+.tab_content {padding-left:30px;padding-top:15px;font-size:14px;display: none;}
+.tab_container .tab_content ul {width:100%; margin:0px; padding:0px;}
+.tab_container .tab_content ul li{padding:5px;}
+ #popup_container {width: 510px;margin: 0 auto;}
+.popup_search_btn{text-align:center;padding:4px;}
+.searchAddrForm{width:447px;height:140px;margin-top:7px;}
+
+/* 팝업 텍스트 양식 */
+.poptxt1{font-size:15px;color:#333;line-height:1.5em;}
+.poptxt2{font-size:12px;color:#333;line-height:1.5em;}
+.poptxt3{font-size:12px;color:#333;}
+.poptxt4{font-size:12px;color:#333;margin-bottom:10px;padding:0 10px;line-height:18px;}
+.poptxt5{font-size:14px;color:#333;margin-bottom:10px;padding:0 10px;}
+.poptxt_c{font-size:13px;color:#333;margin:20px;text-align:center;}
+.blue{color:#2d6bba;}
+.red{color:#ba2d2d;}
+
+/* 지도검색 */
+.mapinput_area{position:absolute;width:488px;border:1px solid #ccc;background:#fff;margin-bottom:10px;z-index:100;padding:10px 0 10px 20px;}
+.input_area{width:488px;border:1px solid #ccc;background:#fff;margin-bottom:10px;padding:10px 0 10px 20px;}
+.input_area:after{content:""; display:block; clear:both;}
+.search_line{float:left;display:inline-block;}
+.search_line:after{content:""; display:block; clear:both;}
+.map_area{width:510px;height:600px;background:#ccc;}
+
+/* 개인정보 처리방침 */
+.ps_auth {width:510px;text-align:justify;line-height:120%;color:#333;font-size:12px;}
+.ps_auth h3 {color:#2d6bba; font-size:14px; line-height:150%;font-weight:bold;}
+.ps_auth strong	{color:#000; font-size:12px; line-height:150%; }
+.ps_auth .box1	{color:#000; font-size:12px; line-height:130%; padding:10px 14px; border:2px solid #96b5dc; margin-top:6px;}
+table.type_ps1{width:100%;  border-bottom:1px solid #eeeff1; font-size:12px; margin-top:7px;border-top:2px solid #2d6bba;}
+table.type_ps1 thead th	{color:#444; padding: 5px 0px;  border-bottom:1px solid #d8dadc; background:#f4f7fc; font-weight: bold; text-align:center !important;}
+table.type_ps1 tbody th	{font-weight: normal; border-left-color:#FFF;}
+table.type_ps1 td, table.type_ps1 th {color:#333; padding:4px 0; border-bottom:1px solid #eeeff1; border-left:1px solid #eeeff1; text-align:center; line-height:1.4}
+table.type_ps1 .alft	{text-align:left; padding:3px 3px 3px 10px}
+table.type_ps1 .first	{border-left-color:#FFF}
+table.type_ps2{width:100%;font-size:12px; margin-top:7px; }
+table.type_ps2 tbody {border-top:2px solid #2d6bba;}
+table.type_ps2 tbody th	{font-weight: normal; border-left-color:#FFF;border-bottom:1px solid #eeeff1;
+background:#f4f7fc;padding-left:15px;}
+table.type_ps2 tbody td {color:#333; padding:4px 0; border-bottom:1px solid #eeeff1; border-left:1px solid #eeeff1; text-align:center; line-height:1.4}
+
+/* 공공 아이핀 발급안내 */
+.pop_box{clear:both;width:100%;margin:0 auto;padding:20px;}
+.pop_box h2{font-size:16px;font-weight:bold;margin:5px;}
+.pop_box h3{font-size:14px;font-weight:bold;color:#2d6bba;margin:10px;}
+.pop_box h3{font-size:14px;font-weight:bold;color:#2d6bba;margin:10px;}
+.pop_box strong{font-size:14px;padding:10px;}
+.pop_box a{font-size:14px;color:#2d6bba;}
+.pop_box a:hover{text-decoration:underline;}
+
+/* 본인인증 */
+.pop_niceid{width:100%;text-align:center;}
+.pop_niceid p{padding:30px;font-size:14px;}
+.niceID_pop_bg{display:block;background:#eee;padding:10px;}
+.input_line{display:inline-block;height:30px;}
+.input_line label{width:300px;}
+
+/* 보호자 동의 */
+.parent_agree{width:510px;margin:0 auto;}
+.parent_agree p.poptxt1{margin-top:5px;}
+.parent_agree p.poptxt2{margin-bottom:5px;}
+.parent_inputbox{width:478px;margin:0 auto;border:1px solid #ccc;padding:15px;margin-bottom:10px;}
+.parent_agree form {}
+.parent_agree form ul{padding:5px;}
+.parent_agree form ul li{padding-bottom:10px;}
+.parent_agree form ul li label{display:inline-block;width:110px;}
+.parent_agree form ul li input{padding-left:5px;}
+.parent_inputbox p input.checkbox{height:12px;vertical-align:middle;}
+.parent_inputbox p span{font-size:12px;padding-left:3px;vertical-align:middle;}
+
+/* 분류명 선택 팝업(구) 
+#popup_wrap2{width:800px;height:600px;}
+.pop_header2 {overflow:hidden;width:800px;height:46px;padding-top:15px;}
+.pop_header2 h1 {float:left; color:#2d6bba; font-size:28px;margin-left:15px;margin-top:1px;}
+.pop_header2 a{float:right;width:36px;height:36px; background:url('/images/home/common/popup_close.gif') no-repeat 0 0;text-indent:-9999px;overflow:hidden;margin-right:21px;}
+div.lost_group{width:755px;height:520px;margin:0 auto;}
+div.lost_group a:hover{text-decoration:underline;}
+div.lost_group .lost_group_ul1{display:inline-block;width:100%;height:523px;background:#fff;
+border-top:1px solid #ccc;border-left:1px solid #ccc;}
+div.lost_group .lost_group_ul1 li.lost_group_li1 {display:inline-block;float:left;width:150px;height:130px;font-size:12px;border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+.lost_group_ico {float:left;width:150px;height:50px;border-bottom:1px dashed #ccc;margin-bottom:3px;}
+.lost_group_ico img{float:left;height:40px;padding-left:10px;padding-top:5px;}
+.lost_group_ico p{height:50px;line-height:50px;font-weight:bold;float:left;font-size:16px;vertical-align:top;padding-left:10px;}
+.lost_group_ul1 li ul{padding:5px;height:100%;}
+.lost_group_ul1 li ul li{font-size:12px;text-align:left;float:left;padding-top:3px;padding-left:5px;}
+.lost_group_ul1 li.lost_group_li1{text-align:center;}
+*/
+
+/* 웹접근성 인증 팝업 */
+#popup_wrap3{width:700px;height:850px;padding:15px;}
+.pop_header3 {overflow:hidden;width:700px;height:46px;}
+.pop_header3 h1 {float:left; color:#2d6bba; font-size:28px;margin-top:1px;}
+.pop_header3 a{float:right;width:36px;height:36px; background:url('/images/home/common/popup_close.gif') no-repeat 0 0;text-indent:-9999px;overflow:hidden;}
+#popup_wrap3 .web_accesibility {width:670px; color:#333;margin: 0 auto;}
+#popup_wrap3 .web_accesibility h3{font-size:14px;font-weight:bold;color:#2d6bba;margin-bottom:10px;}
+#popup_wrap3 .box1{color:#000; font-size:13px; line-height:130%; padding:10px 14px; border:2px solid #96b5dc; margin-bottom:30px;}
+#popup_wrap3 table.type01{width:100%;  border-bottom:1px solid #eeeff1; font-size:12px; margin-top:7px;border-top:2px solid #2d6bba;margin-bottom:30px;}
+#popup_wrap3 table.type01 thead th	{color:#444; padding: 5px 0px;  border-bottom:1px solid #d8dadc; background:#f4f7fc; font-weight: bold; text-align:center !important;}
+#popup_wrap3 table.type01 tbody th	{font-weight: normal; border-left-color:#FFF;}
+#popup_wrap3 table.type01 td, table.type_ps1 th {color:#333; padding:4px 0; border-bottom:1px solid #eeeff1; border-left:1px solid #eeeff1; text-align:center; line-height:1.4}
+
+/* 주소팝업 주소출력부(기존것 수정) */
+.addr_box{width:508px;border:1px solid #ccc;margin:0 auto;}
+.add_box_post {clear:both; width:508px; height:200px;padding:4px 0;overflow-y:auto;overflow-x:hidden;}
+.add_box_post table.type03{width:508px; font-size:14px;border:0;}
+.add_box_post table.type03 tbody>tr{}
+.add_box_post table.type03 tbody>tr:hover{background-color:#eee;}
+.add_box_post table.type03>td{color:#333; padding-top:9px;padding-left:15px;text-align:left; vertical-align:top; color:#333;}
+.add_box_post table.type03>th{color:#333; padding-top:9px;padding-left:15px;text-align:left; vertical-align:top; color:#333;}
+.add_box_post table.type03 tbody>th {font-weight:normal; padding:3px 0 8px 9px;}
+.add_box_post table.type03 tbody>td {font-weight:normal;}
+
+/* 공인인증서 등록팝업(기존것 수정) */
+ #popup_wrap4{width:316px;height:400px;}
+ #popup_wrap4 .pop_header {overflow:hidden;width:316px;height:46px;padding-top:15px;}
+ #popup_wrap4 .pop_header h1 {float:left; color:#2d6bba; font-size:28px;margin-left:10px;margin-top:1px;}
+ #popup_wrap4 .pop_header a{float:right;width:36px;height:36px; background:url('/images/home/common/popup_close.gif') no-repeat 0 0;text-indent:-9999px;overflow:hidden;margin-right:15px;}
+.gpkiRegistView {width:285px;height:324px;padding:0 15px;}
+.gpkiRegistView .find_listBox {}
+.gpkiRegistView .find_listBox table tr td {width:316px;height:200px;}
+.gpkiRegistView .find_listBox table tr td object{width:285px;height:180px;}
+.search_areamt18 {width:285px;height:36px;text-align:center;margin-top:10px;border:1px solid #ccc;padding-top:10px;}
+.search_areamt18 label{font-size:14px;margin-right:10px;}
+.search_areamt18 input{border:1px solid #d6d6d6;height:24px;width:120px;}
+.gpkiRegistView p.button2_wrap{margin-top:20px;text-align:center;}
+    
+/*통신사 및 보험사출력용 팝업*/
+#popup_wrap5 {width:760px;height:820px;}
+#popup_wrap5 p.poptxt1{margin-left:15px;}
+#popup_wrap5 .pop_header {overflow:hidden;width:760px;height:46px;padding-top:15px;}
+#popup_wrap5 .pop_header h1 {float:left; color:#2d6bba; font-size:28px;margin-top:1px;}
+#popup_wrap5 .pop_header a{float:right;width:36px;height:36px; background:url('/images/home/common/popup_close.gif') no-repeat 0 0;text-indent:-9999px;overflow:hidden;margin-right:15px;}
+#popup_wrap5 .popMyLostDetail{width:760px;margin-bottom:30px;}
+#popup_wrap5 .popMyLostDetail .img_area {float:left;width:370px;margin-right:50px;margin-bottom:20px;margin-left:15px;}
+#popup_wrap5 .popMyLostDetail .img_area p.lost_img img{width:370px;height:370px;background:#eee;border:1px solid #eee;}
+#popup_wrap5 .popMyLostDetail .find_info {float:left;width:300px;height:380px;}
+#popup_wrap5 .popMyLostDetail .find_info_name{font-size:22px;font-weight:bold;margin-bottom:30px;}
+#popup_wrap5 .popMyLostDetail .find_info ul li p.find01{display:inline-block;font-weight:bold;color:#333;font-size:14px;width:100px;height:30px;}
+#popup_wrap5 .popMyLostDetail .find_info ul li p.find02{display:inline-block;color:#333;font-size:14px;}
+#popup_wrap5 .popMyLostDetail .find_info ul li p.find02 button.abtn_07{border:1px solid #ccc;background:#fff;margin-left:10px;width:72px;height:25px;}
+#popup_wrap5 .popMyLostDetail .find_info:after{content:""; display:block;clear:both;}
+#popup_wrap5 .append_lost{margin-bottom:40px;margin-left:15px;}
+#popup_wrap5 .popMyLostDetail .find_info ul li p.find02 em{color:red;font-weight:bold;}
+#popup_wrap5 .popMyLostDetail hr.bottom_line{clear:both;display:block;border:1px;height:1px;background:#ccc;margin-bottom:30px;}
+#popup_wrap5 .popMyLostDetail:after{content:""; display:block;clear:both;}
+    
+/* 분류명 선택 팝업(2016.12.19 수정) */
+.pop_layer1 {display: none;	position: fixed;width:700px;height:520px;z-index: 300;background: #fff;border:1px solid #ccc;
+left: 50%;top:50%;margin-top:-245px;margin-left:-350px;box-shadow: 2px 2px 5px #868686;}
+.find_kindPop2{}
+.pop_header2 {overflow:hidden;width:700px;height:30px;vertical-align:middle;}
+.pop_header2 h1 {float:left; color:#2d6bba; font-size:18px;margin-left:15px;margin-top:3px;}
+.pop_header2 p {}
+.pop_header2 a{float:right;width:30px;height:30px; background:url('../../images/home/common/popup_close.gif') no-repeat -3px -3px;text-indent:-9999px;overflow:hidden;}
+div.lost_group{margin:0 auto;}
+div.lost_group a:hover{text-decoration:underline;}
+div.lost_group .lost_group_ul1{display:inline-block;width:100%;background:#fff;
+border-top:1px solid #ccc;height:150px;}
+div.lost_group .lost_group_ul1 li.lost_group_li1 {display:inline-block;float:left;width:100px;height:100%;font-size:12px;border-bottom:1px solid #ccc;}
+div.lost_group .lost_group_ul1 li.lost_group_li1:nth-child(15){border-bottom:0;}
+div.lost_group .lost_group_ul1 li.lost_group_li1:nth-child(16){border-bottom:0;}
+div.lost_group .lost_group_ul1 li.lost_group_li1:nth-child(17){border-bottom:0;}
+div.lost_group .lost_group_ul1 li.lost_group_li1:nth-child(18){border-bottom:0;}
+div.lost_group .lost_group_ul1 li.lost_group_li1:nth-child(19){border-bottom:0;}
+div.lost_group .lost_group_ul1 li.lost_group_li1:nth-child(20){border-bottom:0;}
+.lost_group_ico {width:100px;height:50px;margin-bottom:10px;font-size:12px;text-align:left;float:left;padding-top:8px;padding-left:10px;}
+.lost_group_ico img{padding-top:5px;}
+.lost_group_ico p {font-weight:bold;font-size:13px;vertical-align:top;}
+.lost_group_ul1 li ul{padding:5px;height:100%;}
+.lost_group_ul1 li ul li{font-size:12px;text-align:left;float:left;padding-top:3px;padding-left:5px;}
+.lost_group_ul1 li.lost_group_li1{text-align:center;}
+.lost_group_ul1 li ul.lost_group_sub {margin:-5px 0px 5px 0px;}
+.lost_group_reset{position:relative;top:0px;left:220px;color:#ccc;font-size:12px;margin-right:10px;}
+
+

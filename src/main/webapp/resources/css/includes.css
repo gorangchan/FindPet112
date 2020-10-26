@@ -1,0 +1,105 @@
+@charset "UTF-8";
+	.footer_content {
+        display: flex;
+        justify-content: space-around;
+       
+        
+    }
+    footer {
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .adminMenu {
+        justify-content: flex-end;
+        display: flex;
+        background-color: rgb(241, 241, 241);
+        padding: 8px;
+        
+    }
+
+    .topMenu {
+        padding: 0px 15px 0px 15px;
+
+    }
+
+    .logo {
+        justify-content: space-around;
+        display: flex;
+        padding: 30px;
+    }
+    .menuBar {
+        justify-content: space-around;
+        display: flex;
+        background-color: #2d6bba;
+        color: white;
+        padding: 20px;
+    }
+    
+     .totalMenu:link {
+        color: white;
+    }
+    .totalMenu:hover {
+        color: white;
+    }
+    .totalMenu:visited {
+        color: white;
+    }
+    a {
+        text-decoration: none;
+    }
+    
+    
+.barTitle{
+ 
+    background-color: #2d6bba;
+    color: white;
+    padding: 30px;
+    font-size: 25px;
+
+}
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  z-index: 1;
+  background-color:white;
+  overflow-x: hidden;
+  margin:30px 0px;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color:  #2d6bba;
+  color:white ;
+  font-size: 15px;
+}
+
+/* Style the content */
+.layout {
+	display: flex;
+	position: absolute;
+	left: 220px;
+	justify-content: space-around;
+ }
+ 
+
+.contents-wrap {
+
+   position:absolute;
+	top:350px;
+   left: 500px;
+   right:100px;
+   
+}
+    
+    
+   

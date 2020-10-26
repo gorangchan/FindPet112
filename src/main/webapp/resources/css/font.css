@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* NanumGothic */
+@font-face {
+	font-family:'NanumGothic';
+	src:url(../fonts/NanumGothic.eot); /* IE9~IE11 */
+	src:url(../fonts/NanumGothic.eot?#iefix) format('embedded-opentype'), /* IE6~IE8 */
+       	url(../fonts/NanumGothic.woff) format('woff'); /* IE9,IE10,IE11,파이어폭스,크롬 */
+}
+@font-face {
+	font-family:'NanumGothicBold';
+	src:url(../fonts/NanumGothicBold.eot); /* IE9~IE11 */
+	src:url(../fonts/NanumGothicBold.eot?#iefix) format('embedded-opentype'), /* IE6~IE8 */
+       	url(../fonts/NanumGothicBold.woff) format('woff'); /* IE9,IE10,IE11,파이어폭스,크롬 */
+}
+@font-face {
+	font-family:'NanumGothicExtraBold';
+	src:url(../fonts/NanumGothicExtraBold.eot); /* IE9~IE11 */
+	src:url(../fonts/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'), /* IE6~IE8 */
+       	url(../fonts/NanumGothicExtraBold.woff) format('woff'); /* IE9,IE10,IE11,파이어폭스,크롬 */
+}
+
+/* Tahoma */
+@font-face {
+    font-family:'Tahoma';
+    src: url(../fonts/tahoma.eot);
+    src: url(../fonts/tahoma.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/tahoma.woff) format('woff');
+}
+
+@font-face {
+    font-family:'TahomaBold';
+    src: url(../fonts/tahomabd.eot);
+    src: url(../fonts/tahomabd.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/tahomabd.woff) format('woff');
+}
